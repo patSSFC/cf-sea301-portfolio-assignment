@@ -1,18 +1,17 @@
 var projects = [];
-function Project(opts) {
-  for (var o in opts) {
-    if (opts.hasOwnProperty(o)) {
-      this[o] = opts[o];
+function Project(projData) {
+  for (var data in projData) {
+    if (projData.hasOwnProperty(data)) {
+      this[data] = projData[data];
     }
   }
 }
 
 Project.prototype.toHtml = function () {
-  $newProject = $('.template').clone();
+  var $newProject = $('.template').clone();
   $newProject.removeClass('template');
   $newProject.find('h2').text(this.projName);
   $newProject.find('section.four.columns:first').html('<p>' + this.projDescription + '</p>');
-
   return $newProject;
 };
 
