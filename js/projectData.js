@@ -1,10 +1,14 @@
 var projectData = [
   {
     projName: 'Example Name',
-    projDescription: 'Some Description'
+    projDescription: 'Some Description',
   },
   {
     projName: 'Example Two',
-    projDescription: 'Another Description'
-  }
+    projDescription: 'Another Description',
+  },
+  {
+    projName: 'Brittanys Project',
+    projDescription: 'For Brittany.',
+  },
 ];
