@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Taylor's Awesome Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300,100,700,700italic,400italic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="vendor/skeleton.css">
     <link rel="stylesheet" href="vendor/ionicons.css">
@@ -11,7 +12,15 @@
   </head>
   <body>
     <main>
-      <header><h1>Taylor's Awesome Portfolio</h1></header>
+      <header id="nav-header" class="header-bar grey white-text">
+        <section class="container">
+          <section class="row">
+            <section class="ten columns">
+              <h1>Taylor's Awesome Portfolio</h1>
+            </section>
+          </section>
+        </section>
+      </header>
       <nav></nav>
         <section id="projects">
           <!-- this is the start of my template project -->
@@ -20,12 +29,12 @@
               <section class="container">
                 <section class="row">
                   <section class="twelve columns">
-                    <header><h2></h2></header>
+                    <header><h2 class="purple-text"></h2></header>
                   </section>
                 </section>
                 <section class="row">
                   <section class="four columns"></section>
-                  <section class="four columns"><i class="ion-jet"></i></section>
+                  <section class="four columns"></section>
                   <section class="four columns"></section>
                 </section>
               </section>
@@ -33,7 +42,7 @@
           </section>
         </section>
     </main>
-    <footer></footer>
+    <footer class="grey white-text"></footer>
     <script type="text/javascript" src="js/projectData.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
