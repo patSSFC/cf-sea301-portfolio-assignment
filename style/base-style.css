@@ -23,7 +23,16 @@ h1 {
 }
 
 .social-icon {
-  text-content: #FFFFFF;
+  font-size: 3em;
+  text-align: center;
+}
+
+i.social-icon:hover{
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#social-icons{
+  margin-top: 3%
 }
 .template {
   display: none;
