@@ -22,3 +22,15 @@ projectData.forEach(function (projData) {
 projects.forEach(function (project) {
   $('#projects').append(project.toHtml());
 });
+
+var render = {
+  changeNavTxtColor: function () {
+    console.log('setting event listener');
+    $('section.nav-links').on('hover', function () {
+      console.log('HOVER HOVER');
+      $(this).find('a').removeClass('pink-text');
+    });
+  },
+};
+
+render.changeNavTxtColor();

@@ -20,6 +20,23 @@ h1 {
   font-style: thin;
 }
 
+section.nav-links {
+  border: solid 2px #D667CD;
+  text-align: center;
+  padding: 10px;
+  margin: 0 2% 2% 0;
+}
+
+.nav-links:hover {
+  color: #FFFFFF;
+  background-color: #D667CD;
+}
+
+a.nav-links {
+  text-decoration: none;
+}
+
+
 .header-bar{
   padding: 1.75%;
   margin-bottom: 2%;
