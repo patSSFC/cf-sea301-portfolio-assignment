@@ -1,16 +1,12 @@
-var projectView = {}
-var render = {
-  changeNavTxtColor: function ($item) {
-    console.log('setting event listener');
-    //FIXME this is not working :(
-    $item.on('hover', function () {
-      console.log('HOVER HOVER');
-      $(this).find('a').removeClass('pink-text');
-    });
-  },
+var projectView = {};
+
+projectView.handleNav = function() {
+  $('.nav-links').on('click', function(event){
+    $('.tab-content').hide();
+    $('#' + $(this).data('content')).fadeIn(500);
+  });
+
+  $('.nav-links:last').click();
 };
 
-
-$sections = $('section.nav-links');
-console.log($sections);
-$.each($sections, render.changeNavTxtColor);
+projectView.handleNav();
