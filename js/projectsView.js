@@ -18,11 +18,24 @@ projectView.setTeasers = function() {
 
     //fucking not working
     if ($eTarget.hasClass('read-on')) {
-      $eTarget.parentsUntil('article').find('.project-body').children().show()
+      $eTarget.parentsUntil('article').find('.project-body').children().show();
       $eTarget.hide();
     }
   });
 };
 
+projectView.navHover = function() {
+  $('.nav-links').on('mouseover', function(e) {
+    $(e.target).children().addClass('white-text');
+    $(e.target).children().removeClass('purple-text');
+  });
+
+  $('.nav-links').on('mouseleave', function(e){
+    $(e.target).children().addClass('purple-text');
+    $(e.target).children().removeClass('white-text');
+  });
+};
+
 projectView.handleNav();
 projectView.setTeasers();
+projectView.navHover();
