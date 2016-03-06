@@ -9,4 +9,20 @@ projectView.handleNav = function() {
   $('.nav-links:last').click();
 };
 
+projectView.setTeasers = function() {
+  $('.project-body *:nth-of-type(n+2)').hide();
+
+  $('#projects').on('click', function(e){
+    var $eTarget= $(e.target);
+    e.preventDefault();
+
+    //fucking not working
+    if ($eTarget.hasClass('read-on')) {
+      $eTarget.parentsUntil('article').find('.project-body').children().show()
+      $eTarget.hide();
+    }
+  });
+};
+
 projectView.handleNav();
+projectView.setTeasers();

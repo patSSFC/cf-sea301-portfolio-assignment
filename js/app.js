@@ -11,7 +11,7 @@ Project.prototype.toHtml = function () {
   var $newProject = $('.template').clone();
   $newProject.removeClass('template');
   $newProject.find('h2').text(this.projName);
-  $newProject.find('section.four.columns:first').html('<p>' + this.projDescription + '</p>');
+  $newProject.find('.project-body').html(this.projDescription);
   return $newProject;
 };
 
