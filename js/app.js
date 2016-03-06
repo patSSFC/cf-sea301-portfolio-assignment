@@ -24,13 +24,16 @@ projects.forEach(function (project) {
 });
 
 var render = {
-  changeNavTxtColor: function () {
+  changeNavTxtColor: function ($item) {
     console.log('setting event listener');
-    $('section.nav-links').on('hover', function () {
+    //FIXME this is not working :(
+    $item.on('hover', function () {
       console.log('HOVER HOVER');
       $(this).find('a').removeClass('pink-text');
     });
   },
 };
 
-render.changeNavTxtColor();
+$sections = $('section.nav-links');
+console.log($sections);
+$.each($sections, render.changeNavTxtColor);
