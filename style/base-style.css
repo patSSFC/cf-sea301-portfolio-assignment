@@ -21,25 +21,33 @@ h1 {
 }
 
 section.nav-links {
-  border: solid 2px #D667CD;
+  border: solid 1px #D667CD;
   text-align: center;
   padding: 10px;
   margin: 0 2% 2% 0;
 }
 
-.nav-links:hover {
-  color: #FFFFFF;
-  background-color: #D667CD;
-}
-
 a {
   text-decoration: none;
+  /*font-weight: lighter;*/
 }
 
 a:hover {
   color: rgba(51, 51, 51, 0.75);
 }
 
+article {
+  margin: 1.25%
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+.nav-links:hover {
+  color: #FFFFFF;
+  background-color: #D667CD;
+}
 
 .header-bar{
   padding: 1.75%;
@@ -61,6 +69,7 @@ i.social-icon:hover{
 #social-icons{
   margin-top: 3%
 }
+
 .template {
   display: none;
 }

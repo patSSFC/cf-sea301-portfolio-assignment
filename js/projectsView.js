@@ -12,19 +12,17 @@ projectView.handleNav = function() {
 projectView.setTeasers = function() {
   $('.project-body *:nth-of-type(n+2)').hide();
 
-  $('#projects').on('click', function(e){
-    var $eTarget= $(e.target);
+  $('#projects').on('click', '.read-on', function(e){
     e.preventDefault();
-
-    //fucking not working
-    if ($eTarget.hasClass('read-on')) {
-      $eTarget.parentsUntil('article').find('.project-body').children().show();
-      $eTarget.hide();
+    if ($(this).hasClass('read-on')) {
+      $(this).parentsUntil('article').find('.project-body').children().show();
+      $(this).hide();
     }
   });
 };
 
 projectView.navHover = function() {
+  //TODO -- apply / remove selected class so the selected button applies
   $('.nav-links').on('mouseover', function(e) {
     $(e.target).children().addClass('white-text');
     $(e.target).children().removeClass('purple-text');
