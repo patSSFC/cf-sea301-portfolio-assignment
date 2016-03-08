@@ -7,7 +7,8 @@ var theme = {
   unselectedBackground: 'white',
 };
 
-projectView.selected = '';
+// build filters
+// handle filters
 projectView.handleNav = function () {
   $('.nav-links').on('click', function (event) {
     $('.tab-content').hide();
@@ -32,7 +33,6 @@ projectView.setTeasers = function () {
 };
 
 projectView.navHover = function () {
-  //TODO -- apply / remove selected class so the selected button applies
   $('.nav-links').on('mouseover', function (e) {
     $evTarget = $(e.target);
     $(e.target).children().addClass('white-text purple');
