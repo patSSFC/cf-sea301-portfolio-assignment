@@ -90,6 +90,26 @@ i.social-icon:hover{
   color: rgba(51, 51, 51, 0.75);
 }
 
+.selected {
+  color: #FFFFFF;
+  background-color: #D667CD;
+}
+
+.selected > a {
+  color: #FFFFFF;
+  background-color: #D667CD;
+}
+
+.unselected > a {
+  color: #D667CD;
+  background-color: #FFFFFF
+}
+
+.unselected {
+  color: #D667CD;
+  background-color: #FFFFFF
+}
+
 #social-icons{
   margin-top: 3%
 }
@@ -124,6 +144,10 @@ i.social-icon:hover{
 
 .grey {
   background-color: rgba(51, 51, 51, 1);
+}
+
+.white {
+  background-color: #FFFFFF;
 }
 
 .pink-text {
