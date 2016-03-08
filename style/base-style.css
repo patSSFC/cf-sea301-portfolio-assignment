@@ -32,7 +32,6 @@ section.nav-links {
 
 a {
   text-decoration: none;
-  /*font-weight: lighter;*/
 }
 
 a:hover {
@@ -54,8 +53,13 @@ h2 {
 .nav-links:hover {
   color: #FFFFFF;
   background-color: #D667CD;
-}
 
+}
+a.nav-links{
+  font-weight: lighter;
+  font-size: 1em;
+  text-transform: uppercase;
+}
 .header-bar{
   width: 100%;
   padding: 1.75%;
