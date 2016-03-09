@@ -16,7 +16,7 @@ footer {
 }
 
 h1 {
-  font-size: 2.0em;
+  font-size: 4.0rem;
   font-style: thin;
   /*text-align: center; -- need to make this apply at smaller sizes*/
 }
@@ -47,7 +47,7 @@ a:hover {
 }*/
 
 h2 {
-  font-size: 1.75em;
+  font-size: 3rem;
 }
 
 .nav-links:hover {
@@ -57,8 +57,9 @@ h2 {
 }
 a.nav-links{
   font-weight: lighter;
-  font-size: 1em;
+  font-size: 1.5rem;
   text-transform: uppercase;
+  text-align: center;
 }
 .header-bar{
   width: 100%;
