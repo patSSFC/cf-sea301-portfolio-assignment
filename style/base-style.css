@@ -179,6 +179,21 @@ i.social-icon:hover{
   color: #FFFFFF;
 }
 
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+
+.hero-bg {
+  background-image: url('../img/cloudy-mountain.jpg');
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+  background-image: linear-gradient(to bottom right, #222222, #dc4225);
+  opacity: .75;
+}
+
+
 @media (min-width: 640px) {
   h1 {
     font-size: 4.0rem;
