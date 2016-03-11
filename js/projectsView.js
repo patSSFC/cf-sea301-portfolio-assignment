@@ -10,14 +10,15 @@ var theme = {
 // build filters
 // handle filters
 projectView.handleNav = function () {
-  $('.nav-links').on('click', function (event) {
+  $('.nav-links').on('click', 'a', function (event) {
     $('.tab-content').hide();
-    $('.nav-links').removeClass('selected').addClass('unselected');
-    $(this).toggleClass('selected unselected');
+    $('.nav-links .selected').removeClass('selected');
+    $(this).addClass('selected');
+    console.log('#' + $(this).data('content'));
     $('#' + $(this).data('content')).fadeIn(500);
   });
 
-  $('.nav-links:last').click();
+  $('a.nav-links:first').click();
 };
 
 projectView.setTeasers = function () {
@@ -32,21 +33,5 @@ projectView.setTeasers = function () {
   });
 };
 
-projectView.navHover = function () {
-  $('.nav-links').on('mouseover', function (e) {
-    $evTarget = $(e.target);
-    $(e.target).children().addClass('white-text purple');
-    $(e.target).removeClass('purple-text unselected');
-
-  });
-
-  $('.nav-links').on('mouseleave', function (e) {
-    $evTarget = $(e.target);
-    $evTarget.children().addClass('purple-text');
-    $evTarget.children().removeClass('white-text purple');
-  });
-};
-
 projectView.handleNav();
 projectView.setTeasers();
-projectView.navHover();

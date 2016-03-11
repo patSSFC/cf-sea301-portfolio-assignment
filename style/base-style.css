@@ -1,6 +1,8 @@
+/* start with mobile first -- look at Skeleton! */
+
 body {
   font-family: 'Lato', sans-serif;
-  color: rgba(51, 51, 51, 1));
+  color: rgba(31, 31, 31, 1);
 }
 
 footer {
@@ -10,9 +12,6 @@ footer {
 	clear:both;
   bottom: 0px;
   text-align: center;
-  border-top-color: rgba(51, 51, 51, .25);
-  border-top-style: solid;
-  border-top-width: thin;
 }
 
 h1 {
@@ -21,50 +20,56 @@ h1 {
   text-align: center;
 }
 
-section.nav-links {
-  border: solid 1px #D667CD;
-  text-align: center;
-  padding: 10px;
-  margin: 0 2% 2% 0;
-  position: relative;
-
-}
-
 a {
   text-decoration: none;
+  color: rgba(31, 31, 31, 1);
 }
 
 a:hover {
-  color: rgba(51, 51, 51, 0.75);
+  color: rgba(31, 31, 31, 1);
 }
 
 h2 {
   font-size: 3rem;
 }
 
-.nav-links:hover {
-  color: #FFFFFF;
-  background-color: #D667CD;
-
+img {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
 }
+
+.nav-links {
+  width: 100%;
+  text-align: center;
+}
+
 a.nav-links{
-  font-weight: lighter;
   font-size: 1.5rem;
   text-transform: uppercase;
   text-align: center;
+  vertical-align: bottom;
+}
+
+.nav-links:hover {
+  color: #FF3366
 }
 .header-bar{
   width: 100%;
-  padding: 1.75%;
-  margin-bottom: 2%;
-  border-bottom-color: rgba(51, 51, 51, .25);
-  border-bottom-style: solid;
-  border-bottom-width: thin;
+  padding: 2.25%;
+  margin-bottom: 4%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99999;
-  background: #FFFFFF;
+  background: rgba(255, 255, 255, 1);
+
+}
+
+.article-body {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(32, 32, 32, 1);
+  padding: 8rem 0 7rem;
 }
 
 .header-spacer {
@@ -84,27 +89,11 @@ a.nav-links{
 }
 
 i.social-icon:hover{
-  color: rgba(51, 51, 51, 0.75);
+  color: rgba(31, 31, 31, 1);
 }
 
 .selected {
-  color: #FFFFFF;
-  background-color: #D667CD;
-}
-
-.selected > a {
-  color: #FFFFFF;
-  background-color: #D667CD;
-}
-
-.unselected > a {
-  color: #D667CD;
-  background-color: #FFFFFF
-}
-
-.unselected {
-  color: #D667CD;
-  background-color: #FFFFFF
+  color: #FF3366;
 }
 
 #social-icons{
@@ -140,7 +129,7 @@ i.social-icon:hover{
 }
 
 .grey {
-  background-color: rgba(51, 51, 51, 1);
+  background-color: rgba(31, 31, 31, 1);
 }
 
 .white {
@@ -172,7 +161,7 @@ i.social-icon:hover{
 }
 
 .grey-text {
-  color: rgba(51, 51, 51, 1);
+  color: rgba(31, 31, 31, 1);
 }
 
 .white-text{
@@ -180,17 +169,34 @@ i.social-icon:hover{
 }
 
 .section {
-  padding: 8rem 0 7rem;
+  padding: 10rem 0 8rem;
   text-align: center;
 }
 
-.hero-bg {
-  background-image: url('../img/cloudy-mountain.jpg');
-  background-size: cover;
+.hero-bg-1 {
   color: #fff;
   padding-bottom: 5rem;
-  background-image: linear-gradient(to bottom right, #222222, #dc4225);
+  background-color: #ee3a52;
+  background-image: linear-gradient(to bottom right, #ff512f, #dd2476);
   opacity: .75;
+  width: 100%;
+}
+
+.project-heading {
+   font-size: 4rem;
+ }
+
+.image-col {
+    margin-left: 0%;
+    margin-bottom: 0%;
+    margin-right: 0%;
+    margin-top: 0%;
+    width:100%;
+    display: inline-block;
+}
+
+.full-width {
+  width: 100%;
 }
 
 
@@ -198,6 +204,10 @@ i.social-icon:hover{
   h1 {
     font-size: 4.0rem;
     font-style: thin;
+    text-align: left;
+  }
+
+  .nav-links {
     text-align: left;
   }
 }
