@@ -8,13 +8,18 @@ function Project(projData) {
 }
 
 Project.prototype.toHtml = function () {
+
+  var $source = $('#project-template').html();
+  var template = Handlebars.compile($source);
+  return template(this);
   var $newProject = $('.template').clone();
-  $newProject.removeClass('template');
-  $newProject.find('h2').text(this.projName);
-  $newProject.find('article').attr('data-category', this.category);
-  $newProject.find('article').attr('data-tech-stack', this.techStack);
-  $newProject.find('.project-body').html(this.projDescription);
-  return $newProject;
+
+  // $newProject.removeClass('template');
+  // $newProject.find('h2').text(this.projName);
+  // $newProject.find('article').attr('data-category', this.category);
+  // $newProject.find('article').attr('data-tech-stack', this.techStack);
+  // $newProject.find('.project-body').html(this.projDescription);
+  // return $newProject;
 };
 
 projectData.forEach(function (projData) {
