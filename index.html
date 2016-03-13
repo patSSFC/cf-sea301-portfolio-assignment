@@ -45,6 +45,9 @@
       <li>
         <select id="{{filterType}}">
           <option value="">-- Filter by {{type}} --</option>
+          {{#each values}}
+            <option value="{{value}}">{{value}}</option>
+          {{/each}}
         </select>
       </li>
       {{/each}}
@@ -126,7 +129,7 @@
       </section>
     </footer>
     <script type="text/javascript" src="js/projectData.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/projectsView.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

@@ -2,6 +2,51 @@ var projectView = {};
 
 // build filters
 // handle filters
+//
+projectView.buildFilters = function () {
+
+  var $filterSource = $('#filter-template').html();
+  var filterTemplate = Handlebars.compile($filterSource);
+  var context = {
+    filters: [],
+  };
+
+  context.filters.push(projectView.buildFilterContext(stackFilters, 'stack-filter', 'Technology Stack'));
+  context.filters.push(projectView.buildFilterContext(categroyFilters, 'category-filter', 'Category'));
+
+  $('#filters').html(filterTemplate(context));
+
+};
+
+projectView.buildFilterContext = function (filterValues, type, blankValue) {
+  var filter = {
+    filterType: type,
+    type: blankValue,
+    values: [],
+  };
+
+  filterValues.forEach(function (value) {
+    filter.values.push({
+      value: value,
+    });
+  });
+
+  return filter;
+
+  // var f = {
+  //     filters: [
+  //       {
+  //         filterType: 'author-filter',
+  //         type: 'Author',
+  //       },
+  //       {
+  //         filterType: 'category-filter',
+  //         type: 'Category',
+  //       },
+  //     ],
+  //   };
+};
+
 projectView.handleNav = function () {
   $('.nav-links').on('click', 'a', function (event) {
     $('.tab-content').hide();
