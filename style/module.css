@@ -20,8 +20,9 @@ a.nav-links{
 
 .header-bar{
   width: 100%;
-  padding: 2.25%;
-  margin-bottom: 4%;
+  margin-bottom: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   position: fixed;
   top: 0;
   left: 0;
@@ -35,10 +36,6 @@ a.nav-links{
   height: 150px;
   background: #FFFFFF;
   z-index: 99;
-}
-
-.header-bar > .container {
-  width: 100%;
 }
 
 /* --- article modules --- */
@@ -77,7 +74,7 @@ i.social-icon:hover{
    margin-top: 3%;
  }
 
- @media (min-width: 640px) {
+ @media (min-width: 550px) {
    .nav-links {
      text-align: left;
    }

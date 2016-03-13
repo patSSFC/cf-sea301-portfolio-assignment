@@ -28,7 +28,16 @@ img {
   margin: 0;
 }
 
-@media (min-width: 640px) {
+select {
+  margin-right: 4rem;
+}
+
+select:focus {
+  border: 1px solid #FF3366;
+  outline: 0;
+}
+
+@media (min-width: 550px) {
   h1 {
     font-size: 4.0rem;
     font-style: thin;
