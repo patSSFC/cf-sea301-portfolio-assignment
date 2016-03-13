@@ -1,0 +1,46 @@
+body {
+  font-family: 'Lato', sans-serif;
+  color: rgba(31, 31, 31, 1);
+}
+
+h1 {
+  font-size: 4.0rem;
+  font-style: thin;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(31, 31, 31, 1);
+}
+
+a:hover {
+  color: rgba(31, 31, 31, 1);
+}
+
+img {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+select {
+  margin-right: 4rem;
+}
+
+select:focus {
+  border: 1px solid #FF3366;
+  outline: 0;
+}
+
+@media (min-width: 550px) {
+  h1 {
+    font-size: 4.0rem;
+    font-style: thin;
+    text-align: left;
+  }
+}

@@ -8,8 +8,50 @@
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="vendor/skeleton.css">
     <link rel="stylesheet" href="vendor/ionicons.css">
-    <link rel="stylesheet" href="style/base-style.css">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/module.css">
+    <link rel="stylesheet" href="style/state.css">
+    <link rel="stylesheet" href="style/theme.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+
+    <script id="project-template" type="text/x-handlebars-template">
+        <article data-category="{{category}}" data-tech-stack="{{techStack}}">
+            <div class="section hero-bg">
+              <header>
+                <h2 class="white-text project-heading">{{projName}}</h2>
+              </header>
+            </div>
+            <div class="article-body">
+            <section data-iamges="true" class="container">
+              <section class="row">
+                <section class="twelve columns"><img src="{{projImg}}" /></section>
+              </section>
+            <section class="row">
+              <section class="twelve columns project-body">{{{projDescription}}}</section>
+            </section>
+              <section class="row">
+                <section class="twelve columns">
+                  <a href="#" class="read-on pink-text">Read on &rarr;</a>
+                </section>
+              </section>
+          </div>
+        </article>
+    </script>
+
+    <script id="filter-template" type="text/x-handlebars-template">
+      {{#each filters}}
+      <li>
+        <select id="{{filterType}}">
+          <option value="">Filter by {{type}}</option>
+          {{#each values}}
+            <option value="{{option}}">{{option}}</option>
+          {{/each}}
+        </select>
+      </li>
+      {{/each}}
+    </script>
   </head>
   <body>
     <main>
@@ -32,34 +74,19 @@
       </header>
       <div class="header-spacer"></div>
       <section id="projects" class="tab-content">
-        <!-- this is the start of my template project -->
-        <section class="template">
-          <article data-category="cat" data-tech-stack="stack">
-              <div class="section hero-bg-1">
-                  <header>
-                    <h2 class="white-text project-heading"></h2>
-                  </header>
-              </div>
-              <div class="article-body">
-              <section data-iamges="true" class="container">
-                <section class="row">
-                  <section class="twelve columns"><img src="img/man-and-ocean.jpg" /></section>
-                </section>
-              <section class="row">
-                <section class="twelve columns project-body"></section>
-              </section>
-                <section class="row">
-                  <section class="twelve columns">
-                    <a href="#" class="read-on pink-text">Read on &rarr;</a>
-                  </section>
-                </section>
-              </section>
-            </div>
-          </article>
+        <section class="container">
+          <section class="row">
+            <section class="twelve columns">
+              <ul id="filters">
+
+              </ul>
+            </section>
+          </section>
+        </section>
+      <!-- projects go here -->
       </section>
-    </section>
       <section id="about" class="tab-content">
-        <div class="section hero-bg-1">
+        <div class="section hero-bg">
           <header>
             <h2 class="white-text project-heading">About Me</h2>
           </header>
@@ -81,7 +108,6 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae necessitatibus eum error expedita nobis doloribus sapiente rerum aspernatur unde, nulla corporis voluptatem laboriosam assumenda aliquam provident, architecto accusantium obcaecati dolor!</p>
               <p>This is some awsome stuff about me</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae necessitatibus eum error expedita nobis doloribus sapiente rerum aspernatur unde, nulla corporis voluptatem laboriosam assumenda aliquam provident, architecto accusantium obcaecati dolor!</p>
-
             </section>
           </section>
         </section>
@@ -109,7 +135,7 @@
       </section>
     </footer>
     <script type="text/javascript" src="js/projectData.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/projectsView.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>

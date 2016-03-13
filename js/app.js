@@ -1,4 +1,7 @@
 var projects = [];
+var stackFilters = [];
+var categroyFilters = [];
+
 function Project(projData) {
   for (var data in projData) {
     if (projData.hasOwnProperty(data)) {
@@ -8,13 +11,18 @@ function Project(projData) {
 }
 
 Project.prototype.toHtml = function () {
-  var $newProject = $('.template').clone();
-  $newProject.removeClass('template');
-  $newProject.find('h2').text(this.projName);
-  $newProject.find('article').attr('data-category', this.category);
-  $newProject.find('article').attr('data-tech-stack', this.techStack);
-  $newProject.find('.project-body').html(this.projDescription);
-  return $newProject;
+  var $source = $('#project-template').html();
+  var template = Handlebars.compile($source);
+
+  if (stackFilters.indexOf(this.techStack) === -1) {
+    stackFilters.push(this.techStack);
+  }
+
+  if (categroyFilters.indexOf(this.category) === -1) {
+    categroyFilters.push(this.category);
+  }
+
+  return template(this);
 };
 
 projectData.forEach(function (projData) {
@@ -24,3 +32,5 @@ projectData.forEach(function (projData) {
 projects.forEach(function (project) {
   $('#projects').append(project.toHtml());
 });
+
+projectView.buildFilters();
