@@ -1,21 +1,13 @@
 var projectView = {};
 
-// build filters
-// handle filters
-//
 projectView.buildFilters = function () {
-
+  var context = { filters: [] };
   var $filterSource = $('#filter-template').html();
   var filterTemplate = Handlebars.compile($filterSource);
-  var context = {
-    filters: [],
-  };
 
   context.filters.push(projectView.buildFilterContext(stackFilters, 'stack-filter', 'Technology Stack'));
   context.filters.push(projectView.buildFilterContext(categroyFilters, 'category-filter', 'Category'));
-
   $('#filters').html(filterTemplate(context));
-
 };
 
 projectView.buildFilterContext = function (filterValues, type, blankValue) {
@@ -26,25 +18,36 @@ projectView.buildFilterContext = function (filterValues, type, blankValue) {
   };
 
   filterValues.forEach(function (value) {
-    filter.values.push({
-      value: value,
-    });
+    filter.values.push({ option: value });
   });
 
   return filter;
+};
 
-  // var f = {
-  //     filters: [
-  //       {
-  //         filterType: 'author-filter',
-  //         type: 'Author',
-  //       },
-  //       {
-  //         filterType: 'category-filter',
-  //         type: 'Category',
-  //       },
-  //     ],
-  //   };
+projectView.handleStackFilter = function () {
+  $('#stack-filter').on('change', function () {
+    if ($(this).val()) {
+      $('article').hide();
+      $('article[data-tech-stack="' + $(this).val() + '"]').fadeIn();
+    } else {
+      $('article').fadeIn();
+    }
+
+    $('#category-filter').val('');
+  });
+};
+
+projectView.handleCategoryFilter = function () {
+  $('#category-filter').on('change', function () {
+    if ($(this).val()) {
+      $('article').hide();
+      $('article[data-category="' + $(this).val() + '"]').fadeIn();
+    } else {
+      $('article').fadeIn();
+    }
+
+    $('#stack-filter').val('');
+  });
 };
 
 projectView.handleNav = function () {
@@ -71,5 +74,9 @@ projectView.setTeasers = function () {
   });
 };
 
-projectView.handleNav();
-projectView.setTeasers();
+$(document).ready(function () {
+  projectView.handleNav();
+  projectView.setTeasers();
+  projectView.handleStackFilter();
+  projectView.handleCategoryFilter();
+});

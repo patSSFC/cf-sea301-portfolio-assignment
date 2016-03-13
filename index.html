@@ -44,9 +44,9 @@
       {{#each filters}}
       <li>
         <select id="{{filterType}}">
-          <option value="">-- Filter by {{type}} --</option>
+          <option value="">Filter by {{type}}</option>
           {{#each values}}
-            <option value="{{value}}">{{value}}</option>
+            <option value="{{option}}">{{option}}</option>
           {{/each}}
         </select>
       </li>
