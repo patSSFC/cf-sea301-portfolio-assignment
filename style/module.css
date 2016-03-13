@@ -48,7 +48,7 @@ a.nav-links{
 
 .hero-bg {
   color: #fff;
-  padding-bottom: 5rem;
+  /*padding-bottom: 3rem;*/
   background-color: #ee3a52;
   background-image: linear-gradient(to bottom right, #ff512f, #dd2476);
   opacity: .75;
