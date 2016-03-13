@@ -1,3 +1,5 @@
+/* --- nav links --- */
+
 .nav-links {
   width: 100%;
   text-align: center;
@@ -13,6 +15,8 @@ a.nav-links{
 .nav-links:hover {
   color: #FF3366
 }
+
+/* --- header bar --- */
 
 .header-bar{
   width: 100%;
@@ -37,6 +41,8 @@ a.nav-links{
   width: 100%;
 }
 
+/* --- article modules --- */
+
 .article-body {
   background-color: rgba(255, 255, 255, 1);
   color: rgba(32, 32, 32, 1);
@@ -52,6 +58,11 @@ a.nav-links{
   width: 100%;
 }
 
+.project-heading {
+  font-size: 4rem;
+}
+
+/* --- social icons --- */
 
 .social-icon {
   font-size: 3em;
@@ -61,10 +72,6 @@ a.nav-links{
 i.social-icon:hover{
   color: rgba(31, 31, 31, 1);
 }
-
-.project-heading {
-   font-size: 4rem;
- }
 
  #social-icons{
    margin-top: 3%;
