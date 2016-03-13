@@ -39,6 +39,16 @@
           </div>
         </article>
     </script>
+
+    <script id="filter-template" type="text/x-handlebars-template">
+      {{#each filters}}
+      <li>
+        <select id="{{filterType}}">
+          <option value="">-- Filter by {{type}} --</option>
+        </select>
+      </li>
+      {{/each}}
+    </script>
   </head>
   <body>
     <main>
@@ -61,6 +71,9 @@
       </header>
       <div class="header-spacer"></div>
       <section id="projects" class="tab-content">
+        <ul id="filters">
+
+        </ul>
       <!-- projects go here -->
       </section>
       <section id="about" class="tab-content">
