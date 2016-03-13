@@ -8,16 +8,20 @@
     <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="vendor/skeleton.css">
     <link rel="stylesheet" href="vendor/ionicons.css">
-    <link rel="stylesheet" href="style/base-style.css">
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/module.css">
+    <link rel="stylesheet" href="style/state.css">
+    <link rel="stylesheet" href="style/theme.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
 
     <script id="project-template" type="text/x-handlebars-template">
         <article data-category="{{category}}" data-tech-stack="{{techStack}}">
-            <div class="section hero-bg-1">
-                <header>
-                  <h2 class="white-text project-heading">{{projName}}</h2>
-                </header>
+            <div class="section hero-bg">
+              <header>
+                <h2 class="white-text project-heading">{{projName}}</h2>
+              </header>
             </div>
             <div class="article-body">
             <section data-iamges="true" class="container">
@@ -57,12 +61,10 @@
       </header>
       <div class="header-spacer"></div>
       <section id="projects" class="tab-content">
-        <!-- this is the start of my template project -->
-
+      <!-- projects go here -->
       </section>
-    </section>
       <section id="about" class="tab-content">
-        <div class="section hero-bg-1">
+        <div class="section hero-bg">
           <header>
             <h2 class="white-text project-heading">About Me</h2>
           </header>
@@ -84,7 +86,6 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae necessitatibus eum error expedita nobis doloribus sapiente rerum aspernatur unde, nulla corporis voluptatem laboriosam assumenda aliquam provident, architecto accusantium obcaecati dolor!</p>
               <p>This is some awsome stuff about me</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae necessitatibus eum error expedita nobis doloribus sapiente rerum aspernatur unde, nulla corporis voluptatem laboriosam assumenda aliquam provident, architecto accusantium obcaecati dolor!</p>
-
             </section>
           </section>
         </section>

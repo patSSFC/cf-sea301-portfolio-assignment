@@ -1,19 +1,12 @@
 var projectView = {};
 
-var theme = {
-  selectedTextColor: 'white-text',
-  selectedBackground: 'purple',
-  unselectedTextColor: 'purple-text',
-  unselectedBackground: 'white',
-};
-
 // build filters
 // handle filters
 projectView.handleNav = function () {
   $('.nav-links').on('click', 'a', function (event) {
     $('.tab-content').hide();
-    $('.nav-links .selected').removeClass('selected');
-    $(this).addClass('selected');
+    $('.nav-links .is-selected').removeClass('is-selected');
+    $(this).addClass('is-selected');
     console.log('#' + $(this).data('content'));
     $('#' + $(this).data('content')).fadeIn(500);
   });
