@@ -18,32 +18,72 @@ footer {
 h1 {
   font-size: 2.0em;
   font-style: thin;
+  /*text-align: center; -- need to make this apply at smaller sizes*/
 }
 
 section.nav-links {
-  border: solid 2px #D667CD;
+  border: solid 1px #D667CD;
   text-align: center;
   padding: 10px;
   margin: 0 2% 2% 0;
+  position: relative;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(51, 51, 51, 0.75);
+}
+
+/* I don't know if I like this style... */
+/*article {
+  margin: 1.25%;
+  border: solid 1px rgba(51, 51, 51, .25);
+  padding: 2%;
+  border-radius: 10px;
+}*/
+
+h2 {
+  font-size: 1.75em;
 }
 
 .nav-links:hover {
   color: #FFFFFF;
   background-color: #D667CD;
+
 }
-
-a.nav-links {
-  text-decoration: none;
+a.nav-links{
+  font-weight: lighter;
+  font-size: 1em;
+  text-transform: uppercase;
 }
-
-
 .header-bar{
+  width: 100%;
   padding: 1.75%;
   margin-bottom: 2%;
   border-bottom-color: rgba(51, 51, 51, .25);
   border-bottom-style: solid;
   border-bottom-width: thin;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background: #FFFFFF;
 }
+
+.header-spacer {
+  display: block;
+  width: 100%;
+  height: 150px;
+  background: #FFFFFF;
+  z-index: 99;
+}
+
+.header-bar > .container {
+  width: 100%; }
 
 .social-icon {
   font-size: 3em;
@@ -54,9 +94,30 @@ i.social-icon:hover{
   color: rgba(51, 51, 51, 0.75);
 }
 
+.selected {
+  color: #FFFFFF;
+  background-color: #D667CD;
+}
+
+.selected > a {
+  color: #FFFFFF;
+  background-color: #D667CD;
+}
+
+.unselected > a {
+  color: #D667CD;
+  background-color: #FFFFFF
+}
+
+.unselected {
+  color: #D667CD;
+  background-color: #FFFFFF
+}
+
 #social-icons{
   margin-top: 3%
 }
+
 .template {
   display: none;
 }
@@ -87,6 +148,10 @@ i.social-icon:hover{
 
 .grey {
   background-color: rgba(51, 51, 51, 1);
+}
+
+.white {
+  background-color: #FFFFFF;
 }
 
 .pink-text {
