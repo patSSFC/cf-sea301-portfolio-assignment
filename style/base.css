@@ -6,7 +6,9 @@ body {
 h1 {
   font-size: 4.0rem;
   font-style: thin;
-  text-align: center;
+  /*text-align: center;*/
+  display: inline-block;
+  vertical-align: bottom;;
 }
 
 h2 {

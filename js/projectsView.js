@@ -74,9 +74,22 @@ projectView.setTeasers = function () {
   });
 };
 
+projectView.hamburgerMenu = function () {
+  $('.ion-navicon').on('click', function (e) {
+    e.preventDefault();
+
+    if ($('#mainNav').hasClass('is-nav-visible')) {
+      $('#mainNav').removeClass('is-nav-visible').fadeOut('slow');
+    } else {
+      $('#mainNav').addClass('is-nav-visible').fadeIn('fast');
+    }
+  });
+};
+
 $(document).ready(function () {
   projectView.handleNav();
   projectView.setTeasers();
   projectView.handleStackFilter();
   projectView.handleCategoryFilter();
+  projectView.hamburgerMenu();
 });

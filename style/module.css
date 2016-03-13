@@ -1,5 +1,9 @@
 /* --- nav links --- */
 
+#mainNav {
+  display: none;
+}
+
 .nav-links {
   width: 100%;
   text-align: center;
@@ -14,6 +18,12 @@ a.nav-links{
 
 .nav-links:hover {
   color: #FF3366
+}
+
+.ion-navicon {
+  font-size: 4.0rem;
+  float: right;
+  vertical-align: bottom;
 }
 
 /* --- header bar --- */
@@ -66,7 +76,7 @@ a.nav-links{
   text-align: center;
 }
 
-i.social-icon:hover{
+.social-icon:hover{
   color: rgba(31, 31, 31, 1);
 }
 
@@ -75,7 +85,14 @@ i.social-icon:hover{
  }
 
  @media (min-width: 550px) {
+   #mainNav{
+     display: block;
+   }
    .nav-links {
      text-align: left;
+   }
+
+   .ion-navicon {
+     display: none;
    }
  }
