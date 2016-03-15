@@ -12,14 +12,15 @@ ul {
   text-align: center;
 }
 
-#filters > li {
-  display: inline;
-}
-
 .section {
   padding: 7rem 0 5rem;
   text-align: center;
 }
+
+#filters > li {
+  display: inline;
+}
+
 
 @media (min-width: 550px){
   ul {
